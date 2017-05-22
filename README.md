@@ -16,7 +16,11 @@ Install below packages
 3. hammerjs - If you plan on using slide toggle or slider, these components have a dependency on hammerjs. If you don’t plan on it, you can skip to the next paragraph.
 4. @types/hammerjs
 
+## Adding a new component for Dailog Popup
+* creating a new component, add in-line styling, don’t add template and don’t add spec file `ng generate component -is -it --no-spec dialog-example`.
+* In your app.module.ts file, though the cli will now include the component you’ve generated in your imports and add it into your declarations array for @NgModule, you’ll need to add a new array called entryComponents and include the DialogExampleComponent (or whichever component you are using to display the dialog) in there. If you don’t add it, your dialog just won’t pop up!
 
+* Add a new component for snack bar like above
 
 ---
 
