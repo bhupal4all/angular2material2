@@ -22,6 +22,12 @@ Install below packages
 
 * Add a new component for snack bar like above
 
+## Styles
+We can use SCSS styles with angular-cli, create a file at src folder and add the entry at '.angular-cli.json' (add the filename to styles arrary)
+
+## Themeing
+Please refer material documentation https://github.com/angular/material2/blob/master/guides/theming.md
+
 ---
 
 # Generated Readme.md
