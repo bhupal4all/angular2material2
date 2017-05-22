@@ -1,12 +1,36 @@
-<h1>
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav mode="side">
+    <md-toolbar>
+      <span>First Row</span>
+      <md-toolbar-row>
+        <span>Second Row</span>
+      </md-toolbar-row>
+      <md-toolbar-row>
+        <span>Third Row</span>
+      </md-toolbar-row>
+    </md-toolbar>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <span>My App</span>
+  </md-toolbar>
+ 
+  <div class="margin-left-right-50">
+    <h1>
   {{title}}
 </h1>
 <h3>Sample Material</h3>
 <div>
-    <a md-button color="primary">Flat button</a>
-    <a md-raised-button color="accent">Raised button</a>
-    <a md-fab color="primary"><md-icon>check</md-icon></a>
-    <a md-mini-fab color="primary"><md-icon>check</md-icon></a>
+  <a md-button color="primary">Flat button</a>
+  <a md-raised-button color="accent">Raised button</a>
+  <a md-fab color="primary">
+    <md-icon>check</md-icon>
+  </a>
+  <a md-mini-fab color="primary">
+    <md-icon>check</md-icon>
+  </a>
 </div>
 
 <h3>Buttons</h3>
@@ -33,7 +57,7 @@
   <button md-icon-button><md-icon>accessibility</md-icon></button>
 </div>
 <div>
-  <md-button-toggle>md-button-toggle</md-button-toggle> 
+  <md-button-toggle>md-button-toggle</md-button-toggle>
 </div>
 
 <h3>Chips</h3>
@@ -42,7 +66,7 @@
     <md-chip> md-chip</md-chip>
     <md-chip class="background-primary-color white-text">md-chip background-primary-color white-text</md-chip>
     <md-chip color="primary" selected="true">md-chip color="primary" selected="true"</md-chip>
-    <md-chip color="accent" selected="true">md-chip color="accent" selected="true"</md-chip>  
+    <md-chip color="accent" selected="true">md-chip color="accent" selected="true"</md-chip>
     <md-chip color="warn" selected="true">md-chip color="warn" selected="true"</md-chip>
   </md-chip-list>
 </div>
@@ -56,7 +80,7 @@
 </div>
 
 <h3>Progress Spinner</h3>
-<div>  
+<div>
   <h4 class="primary-color">Mode: indeterminate</h4>
   <md-progress-spinner mode="indeterminate"></md-progress-spinner>
 </div>
@@ -71,35 +95,35 @@
 
 <h3 class="primary-color">Determinate</h3>
 <div class="margin-top-20">
-    <md-progress-bar color="accent" mode="determinate" value="33"></md-progress-bar>
-</div>
-  
-<h3 class="primary-color">Indeterminate</h3>  
-<div>
-   <md-progress-bar color="accent" mode="indeterminate"></md-progress-bar>
+  <md-progress-bar color="accent" mode="determinate" value="33"></md-progress-bar>
 </div>
 
-<h3 class="primary-color">Buffer</h3>  
+<h3 class="primary-color">Indeterminate</h3>
 <div>
-   <md-progress-bar color="accent" mode="buffer" bufferValue="40"></md-progress-bar>
+  <md-progress-bar color="accent" mode="indeterminate"></md-progress-bar>
+</div>
+
+<h3 class="primary-color">Buffer</h3>
+<div>
+  <md-progress-bar color="accent" mode="buffer" bufferValue="40"></md-progress-bar>
 </div>
 
 <h3 class="primary-color">Query</h3>
 <div>
-   <md-progress-bar color="accent" mode="query"></md-progress-bar>
+  <md-progress-bar color="accent" mode="query"></md-progress-bar>
 </div>
 
 <h3>Dialog</h3>
 <div>
-   <button md-raised-button color="primary" (click)="openDialog()">Example Dialog - Click Me!</button>
+  <button md-raised-button color="primary" (click)="openDialog()">Example Dialog - Click Me!</button>
 </div>
 
 <h3>Tool Tips</h3>
 <div>
-   <span mdTooltip="hey you" mdTooltipPosition="right">Hover over for tooltip</span>
+  <span mdTooltip="hey you" mdTooltipPosition="right">Hover over for tooltip</span>
 </div>
 <div>
-   <button md-raised-button color="primary" mdTooltip="hey look at 
+  <button md-raised-button color="primary" mdTooltip="hey look at 
    that" mdTooltipPosition="above">
       This is a button with a tooltip
    </button>
@@ -107,6 +131,55 @@
 
 <h3>Snack bar</h3>
 <div>
-   <button md-raised-button color="primary" (click)="openSnackBar()">Click to see snack bar</button>
-   <button md-raised-button color="accent" (click)="openSnackComponentBar()">Click to see snack component bar</button>
+  <button md-raised-button color="primary" (click)="openSnackBar()">Click to see snack bar</button>
+  <button md-raised-button color="accent" (click)="openSnackComponentBar()">Click to see snack component bar</button>
 </div>
+
+<h2>Navigations</h2>
+    <div>
+      <h3 class="primary-color">
+        Snackbar displaying string
+      </h3>
+    </div>
+    <div>
+      <button md-raised-button color="primary" (click)="openSnackBar()">Click to see snack bar</button>
+    </div>
+    <div>
+      <h3 class="primary-color">
+        Snackbar displaying component
+      </h3>
+    </div>
+    <div>
+      <button md-raised-button color="primary" (click)="openSnackBarComponent()">Click to see snack bar</button>
+    </div>
+
+    <h3 class="primary-color">
+      Stacked Toolbar
+    </h3>
+    <div>
+      <md-toolbar>
+        <span>First Row</span>
+        <md-toolbar-row>
+          <span>Second Row</span>
+        </md-toolbar-row>
+        <md-toolbar-row>
+          <span>Third Row</span>
+        </md-toolbar-row>
+      </md-toolbar>
+    </div>
+  </div>
+</md-sidenav-container>
+
+<h3>Stack Toolbar</h3>
+<div>
+   <md-toolbar>
+      <span>First Row</span>
+      <md-toolbar-row>
+         <span>Second Row</span>
+      </md-toolbar-row>
+      <md-toolbar-row>
+         <span>Third Row</span>
+      </md-toolbar-row>
+   </md-toolbar>
+</div>
+
